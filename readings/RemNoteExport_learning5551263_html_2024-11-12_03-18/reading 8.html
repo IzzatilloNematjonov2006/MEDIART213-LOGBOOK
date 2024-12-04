@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+      *{
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      reading 8
+    </h1>
+    <br/>
+    <ul>
+        <li>Class 7</li>
+        <li>Reading source: <a isRemReference="true" href="https://javascript-for-web-designers.abookapart.com/?isPin=false">JavaScript for Web Designers — A Book Apart</a></li>
+        <li>Reading notes:</li>
+        <li>There are always more and more new tools and tech to learn</li>
+        <li>Just like CSS, you can embed scripts within the document itself—by wrapping it in &lt;script&gt;&lt;/script&gt;, the same as you’d use &lt;style&gt;&lt;/style&gt; tags to include your CSS.
+            <ul>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/wi8hRSM6T05PcxCTBPLfZNrNtQg71rp4bqEbyqtAKEec9isx4n2hH6t62Sie2csPujTu6tzPWwBaFi5O6Acx0GNXCYUZhDgarwdKmPtGK4yPl0YCbLz4BeQoOHMFVfuO.png" width="742" height="258.5159574468085"/></li>
+            </ul>
+        </li>
+        <li>We can easily reference an external script anywhere we need it. It looks a bit different from the way CSS uses link, instead adding an src attribute to the script tag.
+            <ul>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/spPJ-S17RzGEqsZ06x_Vto8V_e6V5CHAy4R-y5XJSJYScegiBllVA0uh7C0hHAmPEpaqYB7-QyHL8-V0HAaCHhB8k0VT2fhiHYM32Zi5mVQ8CMjL-EBP1MTZADEPgasV.png" width="742" height="197.3404255319149"/></li>
+                <li>script accepts any of HTML’s global attributes—class, id, data- attributes, and so on</li>
+                <li>At the risk of oversimplifying, browsers parse the contents of a file from top to bottom. When we include a script file toward the top of an HTML page, the browser parses, interprets, and executes that script before figuring out what elements are actually on the page. So, if we’re planning on using the DOM to access elements within the page, we need to give the browser time to assemble a map of those elements by looking through the rest of the page—otherwise, when JavaScript goes looking for one in our script, we’re apt to get an error saying that the elements don’t exist</li>
+                <li>The async attribute on a script element tells the browser that it should—predictably—execute the script asynchronously.
+                    <ul>
+                        <li>Upon encountering &lt;script src=&quot;script.js&quot; async&gt; at the top of the document, the browser will initiate a request for the file and parse it as soon as it’s available, but go on to parse the rest of the page in the meantime.
+                            <ul>
+                                <li>we’ll only want to use this in situations where we’re not going to access the DOM—or where we’re programmatically waiting for the document to finish loading before our script does anything with the DOM.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>defer solves the issue of waiting for the DOM to be fully available by indicating to the browser that it should request these scripts but not parse them until it has finished parsing the DOM. 
+                    <ul>
+                        <li>defer means our scripts at the top of the document are requested in parallel with the parsing of the page itself—so there&#39;s less chance of a perceptible delay for the user, and the scripts don’t fire until the page is ready for modification.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>The simplest way to output something to the console from our script is a method named console.log(). In its simplest form, console.log() works just like alert()—allowing you to pass yourself a note within your script.</li>
+        <li>One strict rule—one that occasionally trips me up to this day—is that JavaScript is case-sensitive.
+            <ul>
+                <li>Camel Case, capitalizing every word after the first, as in querySelector or getElementById.</li>
+            </ul>
+        </li>
+        <li>A statement in JavaScript should almost always end in a semicolon, which is a way to tell a JavaScript parser that it has reached the end of a command.</li>
+        <li>There are two flavors of comment native to JavaScript, one of which will be familiar to anyone who’s spent quality time with CSS. Multiline comments are handled using the same syntax as CSS comments:
+            <ul>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/TzCOmxC44wK7cWI-9aEfPqTzssOfrKEi1uQjOAu1lCx98vbIk5YDRR10RaM1kFVEka0YoCT0KqQ7kt6-5D6LZ5o8TOdB3Jxfms-3YF5vl2ebBWeAmT7j41tILlXHqM-7.png" width="742" height="202.27393617021275"/></li>
+            </ul>
+        </li>
+        <li>JavaScript also allows for single-line comments, which don’t need to be explicitly closed. Instead, they close as soon as you start a new line.
+            <ul>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/OUonStfGt8AdsjF4xoNH8iMWO6koigi7vOTmDXjsjh1hL39pYdlHYVAz4NzOWIsUqrCeqwcxM2kP6ILErVbXO8arKkYAM0dSZD54lRkUkHSQrOIJ-AXn2mHiiMCYBzMC.png" width="742" height="79.92287234042553"/></li>
+            </ul>
+        </li>
+
+    </ul>
+    </body>
+</html>

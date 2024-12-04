@@ -1,0 +1,127 @@
+body {
+    background-image: url(../images/cool-background.jpg);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+*{
+    color: aliceblue;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{ 
+    top: 0;
+    width: 100%;
+  }
+.header{
+    font-family:'Franklin Gothic Medium';
+    padding-bottom: 20px;
+    width: 100%;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.dropdown {
+    float: left;
+    overflow: visible;  
+}
+  
+.dropdown .drop-button {
+    font-size: 1em;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+  
+.drop-button:hover, .dropdown:hover, .navbar .hover_element:hover{
+    background-color: #ddd;
+    color: red;
+}
+.navbar a:hover{
+    color: red;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 10;
+}
+  
+.dropdown-content a{
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+.contact_info {
+    bottom: 20px; 
+    right: 20px; 
+    border-radius: 5px;
+    text-align: right;
+    margin-top: 2em;
+  }
+  
+.contact_info a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 20px;
+  }
+  
+.contact_info a:hover, .people_name:hover{
+    color: red;
+}
+footer{
+    width: 100%;
+    font-family:'Franklin Gothic Medium';
+}
+#izzatillo_image{
+    width: 20%;
+    margin-top: 1em;
+
+}
+#centralized, #izzatillo_img{
+    text-align: center;
+    margin-top: 1rem;
+}
+#izzatillo_image:hover{
+    width: 10%;
+}
+.iframes{
+    width: 100%;
+    height: 50em;
+}
+.iframes_people{
+    width: 50%;
+    height: 20em;
+    margin: auto;
+    display: block;
+    border: none;
+}
+main{
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.people_name{
+    text-align: center;
+    font-size: 2em;
+}
+.people_link{
+    text-decoration: none;
+}

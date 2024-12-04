@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <style>
+      .Portal {
+        border-color: lightblue;
+        border-style: solid;
+      }
+      *{
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      reading 4
+    </h1>
+    <br/>
+    <ul>
+        <li>Class 3:</li>
+        <li>Reading note: <a isRemReference="true" href="https://www.smashingmagazine.com/2019/10/editorial-design-patterns-css-grid-subgrid-naming/?isPin=false">Editorial Design Patterns With CSS Grid And Named Columns — Smashing Magazine</a></li>
+        <li>Reading summary and notes by AI: </li>
+        <li>Summary:
+            <ul>
+                <li>In the article <i>&quot;Editorial Design Patterns With CSS Grid And Named Columns&quot;</i> by Rachel Andrew, available on Smashing Magazine, Rachel dives into advanced techniques for creating editorial-style layouts using CSS Grid. The article explores how naming grid lines and columns can make layouts more flexible and intuitive, especially when working with subgrids. Rachel demonstrates how these named columns can help in organizing complex content, like articles and magazine spreads, by allowing designers to label different parts of the layout. This naming approach enhances readability in code and offers a structured way to apply CSS Grid’s powerful layout capabilities, especially in editorial or content-rich designs.  </li>
+            </ul>
+        </li>
+        <li>Important Notes from <i>&quot;Editorial Design Patterns With CSS Grid And Named Columns&quot;</i> by Rachel Andrew
+            <ul>
+                <li><b>CSS Grid Basics for Editorial Design</b>: CSS Grid can create magazine-like layouts by allowing complex, multi-column designs that are challenging to achieve with traditional CSS layouts.</li>
+                <li><b>Named Columns for Clarity</b>: Rachel emphasizes the benefit of naming grid lines and columns, which improves the readability of the CSS code. Named lines make it easier to assign specific sections like headers, sidebars, and footers in an organized way, ideal for content-dense designs.</li>
+                <li><b>Subgrids for Nested Layouts</b>: Subgrids allow for even finer control within grid items, letting designers establish smaller grids within a parent grid, making the layout structure more flexible and organized.</li>
+                <li><b>Responsive Design Integration</b>: By using named columns and grid templates, layouts become more adaptable across screen sizes, enhancing responsiveness.</li>
+                <li><b>Practical Application for Designers</b>: The article encourages designers to explore CSS Grid for editorial purposes and provides practical guidance on how to incorporate named columns for better design flow and easier maintenance.</li>
+            </ul>
+        </li>
+        <li>Notes by me:</li>
+        <li>When using CSS Grid Layout, you can name lines and areas. Both of these things can make working with Grid — especially complex grids — more straightforward.</li>
+        <li>When using the grid-template-areas approach, you give the items that you want to place on the grid a name by using the grid-area property and then placing them around the grid. In the following example, the item with grid-area: content goes into the grid area defined by the grid-template-areas property:
+            <ul>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/_7ekmL0Tyqd3aWlEskEDxjJeCxSLMZ65roXpfA5C5fneFBBQ32GTtDpXY9Tkdt-L7FuJZCTyO5lYV9m9RYVRrE-mKS3WLlkLGDTlCWzrQzepyEDgMsIimKpwA3QSiXW_.png" width="632" height="351.4392523364486"/></li>
+                <li><img src="https://remnote-user-data.s3.amazonaws.com/DiCKzp4_UA0038AQfTlciqGm7t7EaVbU7fzOa9neFSx0ztw37eZmnJF4A1KCmpRmlvMCmHhgYFSMiLLNXEe-GHhAzqyleJ9n6qisKa0hl0d_f8z5HQpPMgNLCkI4fS75.png" width="440" height="345"/>
+                    <ul>
+                        <li>HTML: 
+                            <ul>
+                                <li><pre ><code >&lt;div class=&quot;grid&quot;&gt;
+  &lt;div class=&quot;content&quot;&gt;content&lt;/div&gt;
+  &lt;div class=&quot;content2&quot;&gt;content 2&lt;/div&gt;
+&lt;/div&gt;</code></pre>  </li>
+                            </ul>
+                        </li>
+                        <li>CSS:
+                            <ul>
+                                <li><pre ><code >body {
+  margin: 0 ;
+  padding: 2em;
+  font: 125% &quot;Open sans&quot;, sans-serif;
+}
+
+.grid {
+  display: grid;
+  border: 2px solid rgb(124,222,220);
+  gap: 20px;
+  grid-template-rows: 100px auto auto;
+  grid-template-columns:
+    minmax(0,1fr)
+    minmax(0,1fr) [content-start]
+    minmax(0,2fr)
+    minmax(0,2fr) [content-end]
+    minmax(0,1fr)
+    minmax(0,1fr);
+}
+
+.grid &gt; * {
+  background-color: rgb(114,132,168);
+  color: #fff;
+  padding: 1em;
+  margin: 0;
+}
+
+.content {
+  grid-row: 2;
+  grid-column: content-start / content-end;
+}
+
+.content2 {
+  grid-row: 3;
+  grid-column: content-start / content-end;
+}</code></pre>  </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li></li>
+
+    </ul>
+    </body>
+</html>
